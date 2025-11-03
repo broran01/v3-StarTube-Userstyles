@@ -1,0 +1,629 @@
+/* ==UserStyle==
+@name           2006 Late Player StarTube
+@namespace      github.com/openstyles/stylus
+@version        1.0.0
+@description    A new userstyle
+@author         broran
+==/UserStyle== */
+
+@-moz-document domain("youtube.com") {
+    /* Insert code here... */
+}
+
+/* General Overhaul */
+
+.html5-player-chrome {
+    background: #bbb;
+    height: 32px;
+    border-radius: 6px;
+}
+
+.html5-video-player {
+    background-color: #fff;
+}
+
+.html5-video-player:focus-visible {
+    outline: none !important;
+}
+
+/* Progress Bar Stuff */
+
+.ytp-progress-list {
+    transform: ScaleY(1) !important;
+}
+
+.ytp-progress-bar-container {
+    width: 90%;
+    position: relative;
+    left: 55px;
+    top: 10px;
+}
+
+.appbar-mini-cinema #player.watch-medium .ytp-progress-bar-container {
+    width: 92.6%;
+}
+
+html[data-player-size=fullscreen] #player.watch-medium .html5-video-player .ytp-progress-bar-container {
+    width: 96.7%;
+}
+
+html[data-player-size=fullscreen] .html5-video-player .ytp-progress-bar-container {
+    width: 96.7%;
+}
+
+.html5-storyboard {
+    display: none !important;
+}
+
+.ytp-play-progress {
+    transform: TranslateX(10%);
+    background: #666666;
+}
+
+.ytp-unloaded-progress {
+    z-index: 932;
+    background: #888888;
+}
+
+.ytp-load-progress {
+    z-index: 933;
+    background: #888888;
+}
+
+.html5-scrubber-button {
+    border: none;
+    background: no-repeat url(//theleekspin.neocities.org/2006%20main%20player/scrubber.svg);
+    width: 21px;
+    height: 11px !important;
+    z-index: 99999;
+    top: -1px;
+    transform: ScaleY(1) !important;
+}
+
+.seeking-mode .html5-scrubber-button {
+    border: none;
+    background: no-repeat url(//theleekspin.neocities.org/2006%20main%20player/scrubber.svg);
+    width: 21px;
+    height: 11px !important;
+    z-index: 99999;
+    top: -1px;
+    transform: ScaleY(1) !important;
+}
+
+.html5-progress-bar:focus .html5-scrubber-button, .html5-scrubber-button:active, .html5-scrubber-button:hover {
+    border: none;
+    background: no-repeat url(//theleekspin.neocities.org/2006%20main%20player/scrubber.svg);
+    width: 21px;
+    height: 11px !important;
+    z-index: 99999;
+    top: -1px;
+}
+
+/* Button Hiding */
+
+/* Comment these out if you want to see where you're scrubbing */
+
+.ytp-tooltip {
+    display: none !important;
+}
+
+.ytp-progress-tooltip {
+    display: none;
+}
+
+.html5-storyboard {
+    display: none !important;
+}
+
+.html5-bezel {
+    display: none !important;
+}
+
+.html5-video-loader {
+    display: none !important;
+}
+
+/* To here */
+
+.ytp-chapter-marker {
+    display: none;
+}
+
+.ytp-button-watch-later {
+    display: none;
+}
+
+.ytp-subtitles-button {
+    display: none;
+}
+
+.ytp-subtitles-button-active {
+    display: none;
+}
+
+.ytp-settings-hd-quality-badge {
+    display: none;
+}
+
+.ytp-settings-2k-quality-badge {
+    display: none;
+}
+
+.ytp-settings-4k-quality-badge {
+    display: none;
+}
+
+.ytp-settings-hdp-quality-badge {
+    display: none;
+}
+
+.ytp-button-playlist {
+    display: none !important;
+}
+
+.ytp-button-prev {
+    display: none !important;
+}
+
+.ytp-button-next {    
+    display: none !important;
+}
+
+
+/* Play Button */
+
+.ytp-button-play {
+    background: no-repeat url(//theleekspin.neocities.org/2006%20main%20player/png/play.png);
+    height: 32px;
+    width: 32px;
+    background-size: 28px;
+    position: relative;
+    left: 3px;
+    top: 2px;
+}
+
+.ytp-button-play:not(.ytp-disabled):focus, .ytp-button-play:not(.ytp-disabled):hover {
+    background: no-repeat url(//theleekspin.neocities.org/2006%20main%20player/png/playhover.png);
+    height: 32px;
+    width: 32px;
+    background-size: 28px;
+    position: relative;
+    left: 3px;
+    top: 2px;
+}
+
+.ytp-button-play:not(.ytp-disabled):focus, .ytp-button-play:not(.ytp-disabled):active {
+    background: no-repeat url(//theleekspin.neocities.org/2006%20main%20player/png/playactive.png);
+    height: 32px;
+    width: 32px;
+    background-size: 28px;
+    position: relative;
+    left: 3px;
+    top: 2px;
+}
+
+/* Replay Button */
+
+.ytp-button-replay {
+    background: no-repeat url(//theleekspin.neocities.org/2006%20main%20player/png/replay.png);
+    height: 32px;
+    width: 32px;
+    background-size: 28px;
+    position: relative;
+    left: 3px;
+    top: 2px;
+}
+
+.ytp-button-replay:not(.ytp-disabled):focus, .ytp-button-replay:not(.ytp-disabled):hover {
+    background: no-repeat url(//theleekspin.neocities.org/2006%20main%20player/png/replay.png);
+    height: 32px;
+    width: 32px;
+    background-size: 28px;
+    position: relative;
+    left: 3px;
+    top: 2px;
+}
+
+.ytp-button-replay:not(.ytp-disabled):focus, .ytp-button-replay:not(.ytp-disabled):active {
+    background: no-repeat url(//theleekspin.neocities.org/2006%20main%20player/png/replayactive.png);
+    height: 32px;
+    width: 32px;
+    background-size: 28px;
+    position: relative;
+    left: 3px;
+    top: 2px;
+}
+
+/* Pause Button */
+
+.ytp-button-pause {
+    background: no-repeat url(//theleekspin.neocities.org/2006%20main%20player/png/pause.png);
+    height: 32px;
+    width: 32px;
+    background-size: 28px;
+    position: relative;
+    left: 3px;
+    top: 2px;
+}
+
+.ytp-button-pause:not(.ytp-disabled):focus, .ytp-button-pause:not(.ytp-disabled):hover {
+    background: no-repeat url(//theleekspin.neocities.org/2006%20main%20player/png/pausehover.png);
+    height: 32px;
+    width: 32px;
+    background-size: 28px;
+    position: relative;
+    left: 3px;
+    top: 2px;
+}
+
+.ytp-button-pause:not(.ytp-disabled):focus, .ytp-button-pause:not(.ytp-disabled):active {
+    background: no-repeat url(//theleekspin.neocities.org/2006%20main%20player/png/pauseactive.png);
+    height: 32px;
+    width: 32px;
+    background-size: 28px;
+    position: relative;
+    left: 3px;
+    top: 2px;
+}
+
+/* Time Display */
+
+.ytp-time-display {
+    line-height: 39px;
+    color: #333;
+    font-size: 13px;
+    font-weight: 700;
+    position: absolute;
+    left: 65px;
+}
+
+.ytp-time-current {
+    color: #222;
+    font-size: 11px;
+    position: relative;
+    bottom: 2px;
+    font-weight: 500;
+}
+
+/* Settings Button */
+
+.ytp-settings-button {
+    background: no-repeat url(//theleekspin.neocities.org/2006%20main%20player/png/stop.png);
+    height: 32px;
+    width: 32px;
+    background-size: 18px;
+    position: relative;
+    right: 80.1%;
+    top: 12px;
+}
+
+.appbar-mini-cinema #player.watch-medium .ytp-settings-button {
+    right: 85%;
+}
+
+html[data-player-size=fullscreen] #player.watch-medium .html5-video-player .ytp-settings-button {
+    right: 93.3%;
+}
+
+html[data-player-size=fullscreen] .html5-video-player .ytp-settings-button {
+    right: 93.3%;
+}
+
+.ytp-settings-button:not(.ytp-disabled):focus, .ytp-settings-button:not(.ytp-disabled):hover {
+    background: no-repeat url(//theleekspin.neocities.org/2006%20main%20player/png/stophover.png);
+    height: 32px;
+    width: 32px;
+    background-size: 18px;
+    position: relative;
+    right: 80.1%;
+    top: 12px;
+}
+
+.ytp-settings-button:not(.ytp-disabled):focus, .ytp-settings-button:not(.ytp-disabled):active {
+    background: no-repeat url(//theleekspin.neocities.org/2006%20main%20player/png/stopactive.png);
+    height: 32px;
+    width: 32px;
+    background-size: 18px;
+    position: relative;
+    right: 80.1%;
+    top: 12px;
+}
+
+.ytp-settings-button-active {
+    background: no-repeat url(//theleekspin.neocities.org/2006%20main%20player/png/stopactive.png);
+    height: 32px;
+    width: 32px;
+    background-size: 18px;
+    position: relative;
+    right: 80.1%;
+    top: 12px;
+}
+
+.appbar-mini-cinema #player.watch-medium .ytp-settings-button-active {
+    right: 85%;
+}
+
+.ytp-settings-button-active:focus, .ytp-settings-button-active:hover {
+    background: no-repeat url(//theleekspin.neocities.org/2006%20main%20player/png/stopactive.png);
+    height: 32px;
+    width: 32px;
+    background-size: 18px;
+    position: relative;
+    right: 80.1%;
+    top: 12px;
+}
+
+.ytp-menu-container {
+    transform: translateX(-110%);
+}
+
+.appbar-mini-cinema #player.watch-medium .ytp-menu-container {
+    transform: translateX(-180%);
+}
+    
+/* Volume Panel and Button */
+
+.ytp-volume-control {
+    position: absolute;
+    left: 200px;
+    top: 5px;
+}
+
+.ytp-volume-panel {
+    width: 56px !important;
+}
+
+.html5-player-chrome:after {
+    content:'...';
+    font-size: 69px;
+    background: no-repeat url(//theleekspin.neocities.org/2006%20main%20player/png/volumesliderempty.png);
+    background-size: 57px;
+    height: 56px;
+    z-index: 3050;
+    position: relative;
+    top: 14px;
+    left: 202px;
+    color: rgba(0,0,0,0);
+    transform: none !important;
+}
+
+.ytp-volume-slider-foreground {
+    z-index: 4049;
+    background: no-repeat url(//theleekspin.neocities.org/2006%20main%20player/png/volumesliderhandle.svg);
+    background-size: 5.5px;
+    bottom: 3px;
+}
+
+.ytp-volume-slider-foreground:before {
+    position: absolute;
+    z-index: 1900;
+    top: 4px;
+    left: -55px;
+    width: 55px;
+    height: 4px;
+    background: #000;
+    content: '';
+    display: none;
+}
+
+.ytp-volume-slider-foreground:after {
+    position: absolute;
+    z-index: 1000;
+    top: 4px;
+    width: 55px;
+    height: 4px;
+    content: '';
+    background: #666;
+    left: 5px;
+    display: none;
+}
+
+/* Button */
+
+.ytp-button-volume[data-value=off] {
+    background: no-repeat url(//theleekspin.neocities.org/2006%20main%20player/volume/muted.png);
+    background-size: 30px;
+    position: relative;
+    top: 7px;
+}
+
+.ytp-button-volume[data-value=off]:focus, .ytp-button-volume[data-value=off]:hover {
+    background: no-repeat url(//theleekspin.neocities.org/2006%20main%20player/volume/mutedhover.png);
+    background-size: 30px;
+    position: relative;
+    top: 7px;
+}
+
+.ytp-button-volume[data-value=off]:focus, .ytp-button-volume[data-value=off]:active {
+    background: no-repeat url(//theleekspin.neocities.org/2006%20main%20player/volume/mutedactive.png);
+    background-size: 30px;
+    position: relative;
+    top: 7px;
+}
+
+.ytp-button-volume[data-value=min] {
+    background: no-repeat url(//theleekspin.neocities.org/2006%20main%20player/volume/volumequiet.png);
+    background-size: 30px;
+    position: relative;
+    top: 7px;
+}
+
+.ytp-button-volume[data-value=min]:hover {
+    background: no-repeat url(//theleekspin.neocities.org/2006%20main%20player/volume/volumequiethover.png);
+    background-size: 30px;
+    position: relative;
+    top: 7px;
+}
+
+.ytp-button-volume[data-value=min]:active {
+    background: no-repeat url(//theleekspin.neocities.org/2006%20main%20player/volume/volumequietactive.png);
+    background-size: 30px;
+    position: relative;
+    top: 7px;
+}
+
+.ytp-button-volume[data-value=normal], .ytp-button-volume[data-value=quiet] {
+    background: no-repeat url(//theleekspin.neocities.org/2006%20main%20player/volume/volumenormal.png);
+    background-size: 30px;
+    position: relative;
+    top: 7px;
+}
+
+.ytp-button-volume[data-value=normal]:focus, .ytp-button-volume[data-value=normal]:hover {
+    background: no-repeat url(//theleekspin.neocities.org/2006%20main%20player/volume/volumenormalhover.png);
+    background-size: 30px;
+    position: relative;
+    top: 7px;
+}
+
+.ytp-button-volume[data-value=normal]:focus, .ytp-button-volume[data-value=normal]:hover, .ytp-button-volume[data-value=quiet]:focus, .ytp-button-volume[data-value=quiet]:hover {
+    background: no-repeat url(//theleekspin.neocities.org/2006%20main%20player/volume/volumenormalhover.png);
+    background-size: 30px;
+    position: relative;
+    top: 7px;
+}
+
+.ytp-button-volume[data-value=normal]:focus, .ytp-button-volume[data-value=normal]:active {
+    background: no-repeat url(//theleekspin.neocities.org/2006%20main%20player/volume/volumenormalactive.png);
+    background-size: 30px;
+    position: relative;
+    top: 7px;
+}
+
+.ytp-button-volume[data-value=normal]:focus, .ytp-button-volume[data-value=normal]:active, .ytp-button-volume[data-value=quiet]:focus, .ytp-button-volume[data-value=quiet]:active {
+    background: no-repeat url(//theleekspin.neocities.org/2006%20main%20player/volume/volumenormalactive.png);
+    background-size: 30px;
+    position: relative;
+    top: 7px;
+}
+
+.ytp-button-volume[data-value=max], .ytp-button-volume[data-value=loud] {
+    background: no-repeat url(//theleekspin.neocities.org/2006%20main%20player/volume/volumeloud.png);
+    background-size: 30px;
+    position: relative;
+    top: 7px;
+}
+
+.ytp-button-volume[data-value=max]:focus, .ytp-button-volume[data-value=max]:hover, .ytp-button-volume[data-value=loud]:focus, .ytp-button-volume[data-value=loud]:hover {
+    background: no-repeat url(//theleekspin.neocities.org/2006%20main%20player/volume/volumeloudhover.png);
+    background-size: 30px;
+    position: relative;
+    top: 7px;
+}
+
+.ytp-button-volume[data-value=max]:focus, .ytp-button-volume[data-value=max]:active, .ytp-button-volume[data-value=loud]:focus, .ytp-button-volume[data-value=loud]:active {
+    background: no-repeat url(//theleekspin.neocities.org/2006%20main%20player/volume/volumeloudactive.png);
+    background-size: 30px;
+    position: relative;
+    top: 7px;
+}
+
+/* Theater Mode Button */
+
+.appbar-mini-cinema #player.watch-medium:before {
+    background-color: #fff;
+}
+
+.ytp-size-toggle-large {
+    background: no-repeat url(//theleekspin.neocities.org/2006%20main%20player/png/theaterview.png);
+    background-size: 22px;
+    position: relative;
+    top: 12px;
+}
+
+.ytp-size-toggle-large:before {
+    content: 'Size:';
+    position: relative;
+    right: 36px;
+    top: 2px;
+    font-weight: 700;
+    font-size: 12px;
+    color: #333;
+}
+
+.ytp-size-toggle-small:before {
+    content: 'Size:';
+    position: relative;
+    right: 36px;
+    top: 2px;
+    font-weight: 700;
+    font-size: 12px;
+    color: #333;
+}
+
+.ytp-size-toggle-large:focus, .ytp-size-toggle-large:hover {
+    background: no-repeat url(//theleekspin.neocities.org/2006%20main%20player/png/theaterviewhover.png);
+    background-size: 22px;
+    position: relative;
+    top: 12px;
+}
+
+.ytp-size-toggle-large:focus, .ytp-size-toggle-large:active {
+    background: no-repeat url(//theleekspin.neocities.org/2006%20main%20player/png/defaultview.png);
+    background-size: 22px;
+    position: relative;
+    top: 12px;
+}
+
+.ytp-size-toggle-small {
+    background: no-repeat url(//theleekspin.neocities.org/2006%20main%20player/png/defaultview.png);
+    background-size: 22px;
+    position: relative;
+    top: 12px;
+}
+
+.ytp-size-toggle-small:focus, .ytp-size-toggle-small:hover {
+    background: no-repeat url(//theleekspin.neocities.org/2006%20main%20player/png/defaultviewhover.png);
+    background-size: 22px;
+    position: relative;
+    top: 12px;
+}
+
+.ytp-size-toggle-small:focus, .ytp-size-toggle-small:active {
+    background: no-repeat url(//theleekspin.neocities.org/2006%20main%20player/png/defaultviewactive.png);
+    background-size: 22px;
+    position: relative;
+    top: 12px;
+}
+
+.ytp-button-fullscreen-enter {
+    background: no-repeat url(//theleekspin.neocities.org/2006%20main%20player/png/fullscreen.png);
+    background-size: 22px;
+    position: relative;
+    top: 12px;
+}
+
+.ytp-button-fullscreen-enter:not(.ytp-disabled):focus, .ytp-button-fullscreen-enter:not(.ytp-disabled):hover {
+    background: no-repeat url(//theleekspin.neocities.org/2006%20main%20player/png/fullscreenhover.png);
+    background-size: 22px;
+    position: relative;
+    top: 12px;
+}
+
+.ytp-button-fullscreen-enter:not(.ytp-disabled):focus, .ytp-button-fullscreen-enter:not(.ytp-disabled):active {
+    background: no-repeat url(//theleekspin.neocities.org/2006%20main%20player/png/fullscreen.png);
+    background-size: 22px;
+    position: relative;
+}
+
+.ytp-button-fullscreen-exit {
+    background: no-repeat url(//theleekspin.neocities.org/2006%20main%20player/png/crossrectangle.svg);
+    background-size: 22px;
+    position: relative;
+    top: 12px;
+}
+
+.ytp-button-fullscreen-exit:not(.ytp-disabled):focus, .ytp-button-fullscreen-exit:not(.ytp-disabled):hover {
+    background: no-repeat url(//theleekspin.neocities.org/2006%20main%20player/png/crossrectangle.svg);
+    background-size: 22px;
+    position: relative;
+    top: 12px;
+}
+
+
+.ytp-button-fullscreen-exit:not(.ytp-disabled):focus, .ytp-button-fullscreen-exit:not(.ytp-disabled):active {
+    background: no-repeat url(//theleekspin.neocities.org/2006%20main%20player/png/crossrectangle.svg);
+    background-size: 22px;
+    position: relative;
+    top: 12px;
+}
